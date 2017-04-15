@@ -1,0 +1,103 @@
+html, body {
+	margin: 0;
+	padding: 0;	
+}
+
+body {
+	background: #EEE;	
+}
+
+#content {
+	width: 982px;
+	height:950px;
+	margin: 20px auto;
+	padding: 20px;
+	background: #FFF;	
+	border: 1px solid #CCC;
+}
+
+h1 {
+	margin: 0;
+}
+
+hr {
+	border: none;
+	height: 1px; 
+	background: #CCC;	
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 0;
+}
+
+.chooseFrom{
+	margin-left: 10px;
+	width: 960px;
+	position: relative;
+	float: left;
+	margin-bottom:20px;
+}
+
+.choose {
+	border: 5px solid;
+	text-align: center;
+	margin-right:2px;
+	width: 45%;
+	position: relative;
+	float: left;
+	cursor: pointer;
+}
+
+#chooseTwitter {
+	border-color: #DDD;
+	color: #DDD;
+}
+	
+.columnName {
+	font-weight: bold; 
+	margin-left: 10px;
+	width: 960px;
+	position: relative;
+	float: left;
+}
+
+.articles {
+	width: 980px;
+	position: relative;
+	float: left;
+}
+
+#Twitter {
+	display: none;
+}
+
+.titles {
+	height: 21px; 
+	background: #EEE;
+	margin: 10px;
+}
+
+.title {
+	width: 58%;
+	position: relative;
+	float: left;
+	margin-right: 2%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.date {
+	width: 15%;
+	position: relative;
+	float: left;
+}
+
+.sourcepage {
+	width: 25%;
+	position: relative;
+	float: left;
+}
+
+.sourcepage a{
+	color: #000;
+}
