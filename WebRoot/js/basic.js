@@ -32,13 +32,13 @@ function chooseTwitter(){
 	div4.style.display="none";
 };
 
-function viewContent(url){
+function viewContent(content){
 	layer.open({
 	  title: "View Content",
 	  type: 1,
 	  skin: 'layui-layer-rim', 
 	  area: ['800px', '500px'], 
-	  content: url+'<br/>Note that this assignment is not about being the fastest to finish! You will get bonus points for creativity and the quality of your code and documentation.'
+	  content: content,
 	});
 };
 

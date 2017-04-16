@@ -77,7 +77,7 @@ hr {
 }
 
 .title {
-	width: 58%;
+	width: 51%;
 	position: relative;
 	float: left;
 	margin-right: 2%;
@@ -87,7 +87,7 @@ hr {
 }
 
 .date {
-	width: 15%;
+	width: 22%;
 	position: relative;
 	float: left;
 }

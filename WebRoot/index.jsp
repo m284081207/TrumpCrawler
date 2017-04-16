@@ -31,31 +31,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="title">Title</div><div class="date">Date</div>Operation<div class="sourcepage"></div>
 		</div>
 		<div class="articles" id="CNN">
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="javascript:viewContent('https://www.baidu.com/');">view content</a> / <a href="javascript:sourcePage('https://www.baidu.com/');">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">The article title is here</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
+			<%
+			String article[]=CNNInfo.article();
+			for(int i=0;i<25&&article[i].length()>0;i++){
+			%>
+			<div class="titles"><div class="title"><%=article[i].substring(article[i].indexOf("\"title\":")+9)%></div>
+			<div class="date"><%=article[i].substring(article[i].indexOf("\"mediaDateUts\"")+16,article[i].indexOf("\"url\"")-2)%></div>
+			<div class="sourcepage">
+				<a href="javascript:viewContent('<%=article[i].substring(0,article[i].indexOf("\"mediaDateUts\"")-2).replaceAll("'", "\\\\'")%>');">description</a> / 
+				<a href="javascript:sourcePage('http://www.cnn.com<%=article[i].substring(article[i].indexOf("\"url\"")+7,article[i].indexOf("\"title\"")-2)%>');">source page</a>
+			</div></div>
+			<%}%>
 		</div>
 		<div class="articles" id="Twitter">
 			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
