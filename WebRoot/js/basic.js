@@ -32,7 +32,7 @@ function chooseTwitter(){
 	div4.style.display="none";
 };
 
-function viewContent(content){
+function viewContent(content){  
 	layer.open({
 	  title: "View Content",
 	  type: 1,

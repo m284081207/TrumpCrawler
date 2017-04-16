@@ -46,7 +46,7 @@ public class CNNInfo
 			String line;
 			while ((line = in.readLine()) != null)
 			{
-				result += line;
+				result += line+"\n";
 			}
 		} catch (Exception e)
 		{

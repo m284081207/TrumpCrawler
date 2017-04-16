@@ -28,7 +28,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="choose" id="chooseTwitter" onclick="chooseTwitter()">Trump's latest 25 <b>tweets</b></div>
 		</div>
 		<div class="columnName">
-			<div class="title">Title</div><div class="date">Date</div>Operation<div class="sourcepage"></div>
+			<div class="title">Title</div><div class="date">Time</div>Operation<div class="sourcepage"></div>
 		</div>
 		<div class="articles" id="CNN">
 			<%
@@ -38,37 +38,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="titles"><div class="title"><%=article[i].substring(article[i].indexOf("\"title\":")+9)%></div>
 			<div class="date"><%=article[i].substring(article[i].indexOf("\"mediaDateUts\"")+16,article[i].indexOf("\"url\"")-2)%></div>
 			<div class="sourcepage">
-				<a href="javascript:viewContent('<%=article[i].substring(0,article[i].indexOf("\"mediaDateUts\"")-2).replaceAll("'", "\\\\'")%>');">description</a> / 
+				<a href="javascript:viewContent('<%=article[i].substring(0,article[i].indexOf("\"mediaDateUts\"")-2).replaceAll("'", "\\\\'").replaceAll("\\\"", "'")%>');">description</a> / 
 				<a href="javascript:sourcePage('http://www.cnn.com<%=article[i].substring(article[i].indexOf("\"url\"")+7,article[i].indexOf("\"title\"")-2)%>');">source page</a>
 			</div></div>
 			<%}%>
 		</div>
 		<div class="articles" id="Twitter">
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
-			<div class="titles"><div class="title">Tweet title</div><div class="date">2017-04-15</div><div class="sourcepage"><a href="#">view content</a> / <a href="#">source page</a></div></div>
+			<%
+			String article2[]=TwitterInfo.article();
+			for(int i=0;i<25&&article2[i].length()>0;i++){
+			%>
+			<div class="titles"><div class="title"><%=article2[i].substring(article2[i].indexOf("text")+6,article2[i].indexOf("source")-3)%></div>
+			<div class="date"><%=article2[i].substring(article2[i].indexOf("createdAt")+14,article2[i].indexOf("CST")-1)%></div>
+			<div class="sourcepage">
+				<a href="javascript:viewContent('<%=article2[i].substring(article2[i].indexOf("text")+6,article2[i].indexOf("source")-3).replaceAll("'", "\\\\'")%>');">description</a> / 
+				<a target="_blank" href='https://twitter.com/realDonaldTrump'>source page</a>
+			</div></div>
+			<%}%>
 		</div>
 	</div>
 	<div style="text-align:center">
